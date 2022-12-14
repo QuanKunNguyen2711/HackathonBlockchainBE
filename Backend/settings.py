@@ -25,9 +25,13 @@ SECRET_KEY = 'django-insecure-v@@a5uy%vn#gv!xc06ibawk88v6(o5er@9qi5f*4+k_a&bylon
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.2.224']
+ALLOWED_HOSTS = ['192.168.1.3', 'localhost']
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+CSRF_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'UserManager'
+    'UserManager',
+    'Projects',
+    'Chat'
 ]
 
 MIDDLEWARE = [

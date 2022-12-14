@@ -19,9 +19,8 @@ class User:
                  facebook='',
                  linkedIn=''
                  ):
-        self._id = str(ObjectId()) # Generate objectID for obj
-        self.near_address = near
-        self.profile_basic = {
+        self._id = near # Generate objectID for obj using near address
+        self.basicProfile = {
             'username': username,
             'displayName': displayName,
             'contactNumber': contactNumber,
