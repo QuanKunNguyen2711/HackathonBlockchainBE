@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v@@a5uy%vn#gv!xc06ibawk88v6(o5er@9qi5f*4+k_a&bylon
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.3', 'localhost']
+ALLOWED_HOSTS = ['*', 'localhost', '.ngrok.io']
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'UserManager',
     'Projects',
-    'Chat'
 ]
 
 MIDDLEWARE = [
